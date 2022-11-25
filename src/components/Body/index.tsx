@@ -55,7 +55,7 @@ const index = () => {
             <myContext.Provider value={{item, list, addItem, deleteItem, onChangeHandle, focusInput, scrollFocus}}>
                 <div className="mt-3">
                     <Input ref={inputRef} />
-                    <div className="h-[calc(100vh-(5rem+4rem+2.5rem+0.75rem+2.5rem+6rem+1.25rem+20rem))] my-12
+                    <div className="h-[20rem] my-12
                     overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-gray-100">
                         <ul>
                             {list.map((element, index) => (
