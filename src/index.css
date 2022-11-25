@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply select-none
+    }
+    h1 {
+        @apply text-5xl font-bold;
+    }
+}
+
+@layer components {
+    .my_shadow {
+        @apply drop-shadow-md hover:drop-shadow-xl 
+        focus:drop-shadow-xl transition duration-300
+    }
+}
+
