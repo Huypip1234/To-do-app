@@ -5,7 +5,7 @@ import { myContext } from './context';
 //React-Icon
 import {MdDeleteOutline} from "react-icons/md";
 
-const List = React.forwardRef<{}, HTMLLIElement>((props: {element: string, myKey: number}, ref) => {
+const List = React.forwardRef<HTMLLIElement, {element: string, myKey: number}>(({element, myKey}, ref) => {
     const {deleteItem} = useContext(myContext);
 	const [check, setCheck] = useState(false);
 	return (
@@ -16,9 +16,9 @@ const List = React.forwardRef<{}, HTMLLIElement>((props: {element: string, myKey
 						className="h-5 w-5 accent-black cursor-pointer my_shadow"/>
 				</div>
 				<div className={`w-56 ssm:w-64 ${check ? 'line-through' : ''}`}>
-					{props.element}
+					{element}
 				</div>
-				<div onClick={() => {deleteItem(props.myKey)}} className=""> 
+				<div onClick={() => {deleteItem(myKey)}} className=""> 
 					<MdDeleteOutline className="cursor-pointer" size="1.5rem"/>
 				</div>
 			</li>
