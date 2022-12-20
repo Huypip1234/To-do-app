@@ -9,7 +9,7 @@ function App() {
 	return (
 		<div
 			className={`${
-				isMobile ? "h-70vh" : "h-screen"
+				isMobile ? "h-90vh" : "h-screen"
 			} flex items-center justify-center flex-col`}
 		>
 			<div className="h-[36rem]">
